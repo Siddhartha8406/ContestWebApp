@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Log In</title>
+    </head>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            display: inline-block;
+            position: absolute;
+            margin: 10px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 200%;
+            width: fit-content;
+        }
+
+        h1 {
+            font-size: 400%;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            font-size: 200%;
+        }
+        input {
+            margin: 5px;
+            font-size: xx-large;
+        }
+
+        input[type='submit']{
+            font-size: 80%;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <h1>Log In</h1>
+            <form action="login" method="post">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+                <br>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </body>
+</html>

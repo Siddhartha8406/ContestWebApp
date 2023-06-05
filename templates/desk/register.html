@@ -1,0 +1,69 @@
+<html>
+    <style>
+        body {
+            background-color: #35d680;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            background-color: #35d680;
+            padding: 10px;}
+        
+        div {
+            margin: 10px;
+            font-size: xx-large;
+        }
+
+        .form_elements {
+            margin: 10px;
+            font-size: xx-large;
+        }
+
+        #team_name::placeholder{
+            font-size: xx-large;
+        }
+
+        button {
+            margin: 10px;
+            font-size: 2.5vh;
+            align-self: center;
+            width: fit-content;
+            align-items: center;
+            background-color: #8ad6ad;
+            border: 2px solid;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <form action="" method="post">
+                    {% csrf_token %}
+                    <div>
+                        <label for="team_name">Team Name:</label>
+                        {{ form.team_name }}
+                    </div>
+
+                    <div>
+                        <label for="team_college">College:</label>
+                        {{ form.team_college }}
+                    </div>
+
+                    <div>
+                        <label for="team_department">Department:</label>
+                        {{ form.team_department }}
+                    </div>
+
+                    <button type="submit" class="">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

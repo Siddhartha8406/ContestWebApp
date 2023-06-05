@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #35d680;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .container button{
+                margin: 10px;
+                font-size: 5vh;
+                width: fit-content;
+                align-items: center;
+                background-color: #8ad6ad;
+                border: 2px solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <button onclick="window.location.href = '/register';">Register</button>
+            <button onclick="window.location.href = '/check';">Check</button>
+        </div>
+    </body>
+</html>

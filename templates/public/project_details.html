@@ -1,0 +1,39 @@
+<html>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 1000%;
+            margin: auto;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        img {
+            width: 80vw;
+            height: auto;
+            align-self: center;
+        }
+
+        .description {
+            font-size: 400%;
+        }
+    </style>
+    <body>
+        <h1>{{ project.project_name }}</h1>
+        <div>
+            <img src="{{ project.project_image.url }}"><br>
+            <a class="description">{{ project.project_description }}</a><br><br>
+            <a>{{ project.team_name }}</a><br>
+            <a>{{ project.team_college }}</a><br>
+            <a href="{{ project.project_video_url }}">Demo Video</a><br>
+            <a href="{{ project.project_source_code }}">Source Code</a><br>
+        </div>
+    </body>
+</html>

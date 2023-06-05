@@ -1,0 +1,57 @@
+<html>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            display: inline-block;
+            position: absolute;
+            margin: 10px;
+            width: fit-content;
+        }
+
+        h1 {
+            font-size: 400%;
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            font-size: 200%;
+            text-align: center;
+        }
+
+        label {
+            padding: auto;
+            margin: auto;
+        }
+
+        input[type='submit'] {
+            font-size: 80%;
+        }
+    </style>
+
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="Name">Username:
+            {{ form.p_name }}</label><br>
+
+            <label for="Description">Decription:
+            {{ form.p_description }}</label><br>
+
+            <label for="demo_link">Demo Link:
+            {{ form.p_demo_link }}</label><br>
+
+            <label for="Source Code">Github Link:
+            {{ form.p_source_link }}</label><br>
+
+            <label for="Image">Project Image:
+            {{ form.p_image }}</label><br>
+
+
+    </body>
+</html>
